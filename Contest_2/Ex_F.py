@@ -1,20 +1,28 @@
-banana = list(map(int, input().split()))
-while(banana != [0, 0]):
-	D = banana[0]
-	N = banana[1]
-	ans = []
-	num = [int(i) for i in list(input())]
-	if (num == [1, 0, 0, 0, 0, 0, 0]:
-		print(100)
+def g(n):
+	if (n == 0):
+		return [0]
 	else:
-		print(num)
-		for i in range(len(num)):
-			if (num[i] == max(num[i : (D - N) + len(ans) + 1])):
-				ans.append(num[i])
-		for i in ans:
-			print(i, end="")
-		print("")
-	banana = list(map(int, input().split()))
+		array = []
+		for i in range(len(str(n))):
+			array.append(int(''.join(map(str, str(n)[:i] + str(n)[i+1:]))))
+		return max(array)
+	
+def f(num, l):
+	for i in range(l):
+		num = g(num)
+	return num
+	
+banana = list(map(int, input().split()))
+while (banana != [0, 0]):
+	l = banana[1]
+	num = int(input())
+	print(f(num, l))
+	banana = list(map(int, input().split()))	
 
+	
+		
+
+			
+	
 	
 	
